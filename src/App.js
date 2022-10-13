@@ -1,7 +1,8 @@
 import Expense from "./components/Expense/expense";
 import NewExpense from "./components/ExpenseForm/NewExpense";
+import { useState } from "react";
 
-const expenses = [
+const DUMMY_DATA = [
   {
     id: 1,
     title: "Toilet Paper",
@@ -24,14 +25,20 @@ const expenses = [
 ];
 
 function App() {
+  const [expense, setExpense] = useState(DUMMY_DATA);
+
   const getDatafromChild = (dataGotten) => {
-    console.log(dataGotten);
+    // console.log(dataGotten);
+    setExpense((prevState) => {
+      return [dataGotten, ...prevState];
+      // console.log(prevState)
+    });
+    // console.log(expenses);
   };
   return (
     <div className="App">
       <NewExpense onGetData={getDatafromChild} />
-
-      <Expense item={expenses} />
+      <Expense item={expense} />
     </div>
   );
 }
