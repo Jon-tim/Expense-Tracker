@@ -28,12 +28,9 @@ function App() {
   const [expense, setExpense] = useState(DUMMY_DATA);
 
   const getDatafromChild = (dataGotten) => {
-    // console.log(dataGotten);
     setExpense((prevState) => {
       return [dataGotten, ...prevState];
-      // console.log(prevState)
     });
-    // console.log(expenses);
   };
   return (
     <div className="App">

@@ -24,7 +24,6 @@ export default function Form(props) {
 
     props.onAddNewExpense(expenseData);
 
-    // console.log(expenseData);
     setTitle("");
     setAmount("");
     setDate("");

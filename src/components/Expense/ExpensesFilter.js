@@ -4,7 +4,6 @@ import "./ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
   const yearChangeHandler = (event) => {
-    // console.log(year);
     props.getYear(event.target.value);
   };
 
