@@ -1,6 +1,6 @@
 import "./Form.css";
 import { useState } from "react";
-export default function Form() {
+export default function Form(props) {
   const [enteredTitle, setTitle] = useState("");
   const [enteredAmount, setAmount] = useState("");
   const [enteredDate, setDate] = useState("");
@@ -22,7 +22,9 @@ export default function Form() {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    props.onAddNewExpense(expenseData);
+
+    // console.log(expenseData);
     setTitle("");
     setAmount("");
     setDate("");
@@ -52,8 +54,8 @@ export default function Form() {
           <label>Date</label>
           <input
             type="date"
-            min="2005-01-01"
-            max="2025-12-31"
+            min="2019-01-01"
+            max="2022-12-31"
             value={enteredDate}
             onChange={dateChangeHandler}
           />
