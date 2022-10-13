@@ -13,6 +13,7 @@ export default function NewExpense(props) {
   return (
     <div className="new-expense">
       <Form onAddNewExpense={shipDataFromForm} />
+      
     </div>
   );
 }
