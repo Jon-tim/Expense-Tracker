@@ -22,6 +22,18 @@ const DUMMY_DATA = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+  {
+    id: 5,
+    title: "New Shoes",
+    amount: 850,
+    date: new Date(2019, 6, 12),
+  },
+  {
+    id: 6,
+    title: "Youtube Music Subscription",
+    amount: 2,
+    date: new Date(2019, 1, 4),
+  },
 ];
 
 function App() {
